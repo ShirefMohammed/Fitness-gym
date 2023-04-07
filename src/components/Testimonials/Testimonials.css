@@ -1,0 +1,128 @@
+.testimonials {
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+@media (max-width: 992px) {
+    .testimonials {
+        flex-direction: column;
+    }
+}
+
+.left-t {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.left-t div {
+    text-transform: uppercase;
+}
+
+@media (max-width: 992px) {
+    .left-t div {
+        text-align: center;
+    }
+
+    .left-t span{
+        text-align: center;
+    }
+}
+
+.left-t div:nth-child(1) {
+    color: var(--orange);
+}
+
+.left-t div:nth-child(2),
+.left-t div:nth-child(3) {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.left-t div:nth-child(3) {
+    color: white;
+}
+
+.left-t >:nth-child(4) {
+    color: white;
+    text-transform: none;
+    letter-spacing: 2px;
+    line-height: 40px;
+}
+
+.left-t >:nth-child(5) {
+    color: var(--orange);
+}
+
+.left-t >:nth-child(5) > span{
+    color: white;
+}
+
+.right-t {
+    flex: 1;
+    position: relative;
+}
+
+
+.image {
+    text-align: center;
+    width: 12rem;
+    height: 15rem;
+    margin: auto;
+    position: relative;
+}
+
+.image div:nth-child(1) {
+    position: absolute;
+    right: -1rem;
+    bottom: -1rem;
+    width: 100%;
+    height: 100%;
+    background-image: var(--planCard);
+    z-index: -1;
+}
+
+.image div:nth-child(2) {
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--orange);
+    z-index: -1;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+}
+
+.arrows {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+}
+
+@media (min-width: 992px) {
+    .arrows {
+        position: absolute;
+        bottom: 9rem;
+        left: -1rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .arrows {
+        margin-top: 2rem;
+    }
+}
+
+.arrows img {
+    width: 1rem;
+    cursor: pointer;
+}

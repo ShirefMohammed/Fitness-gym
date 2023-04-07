@@ -1,0 +1,131 @@
+.plans{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 0 2rem;
+    position: relative;
+}
+
+.plans-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+@media (max-width: 992px){
+    .plans-header{
+        flex-direction: column;
+        gap: 1rem;
+        font-size: 2rem;
+    }
+}
+
+.cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+@media (max-width: 768px){
+    .cards{
+        flex-direction: column;
+    }
+}
+
+.card{
+    width: 300px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: var(--caloryCard);
+    color: white;
+}
+
+.card:nth-of-type(2){
+    background-image: var(--planCard);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.card:nth-of-type(2) svg{
+    fill: white;
+}
+
+.card:nth-of-type(2) button{
+    color: var(--orange);
+}
+
+.card svg{
+    width: 2rem;
+    height: 2rem;
+    fill: var(--orange);
+}
+
+.card > span:nth-of-type(1){
+    font-weight: bold;
+}
+
+.card > span:nth-of-type(2){
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.card .features{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card .features div{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card .features img{
+    width: 1rem;
+}
+
+.card .see-more{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: .8rem;
+}
+
+.card .see-more img{
+    width: .7rem;
+}
+
+.card button{
+    padding: .8rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.plans-blur{
+    width: 32rem;
+    height: 23rem;
+    top: 6rem;
+}
+
+.plans .plans-blur:nth-of-type(1){
+    left: 0;
+}
+
+.plans .plans-blur:nth-of-type(2){
+    right: 0;
+}

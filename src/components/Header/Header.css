@@ -1,0 +1,140 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 10rem;
+    height: 3rem;
+}
+
+.header-menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    color: white;
+    transform-origin: top right;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+
+@media (max-width: 768px) {
+    .header-menu {
+        position: fixed;
+        top: 6rem;
+        right: 2rem;
+        z-index: 10;
+        flex-direction: column;
+        background-color: #3c3f4580;
+        padding: 2rem;
+        -webkit-border-radius: .5rem;
+        -moz-border-radius: .5rem;
+        -ms-border-radius: .5rem;
+        -o-border-radius: .5rem;
+        border-radius: .5rem;
+    }
+    
+    .close-menu {
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -ms-transform: scale(0);
+        -o-transform: scale(0);
+        transform: scale(0);
+    }
+}
+
+
+
+.header-menu>li {
+    cursor: pointer;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+
+.header-menu li:hover {
+    color: var(--orange);
+}
+
+@media (min-width: 768px) {
+    .bars {
+        display: none;
+    }
+}
+
+.bars {
+    box-sizing: content-box;
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    z-index: 10;
+    padding: .4rem;
+    width: 2rem;
+    height: 2rem;
+    background-color: #3c3f4580;
+    cursor: pointer;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+    border-radius: .5rem;
+}
+
+.bars span {
+    position: absolute;
+    left: .4rem;
+    width: 2rem;
+    height: 2px;
+    background-color: white;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+
+.bars span:nth-child(1) {
+    top: 11px;
+}
+
+.bars span:nth-child(2) {
+    top: 22px;
+}
+
+.bars span:nth-child(3) {
+    top: 33px;
+
+}
+
+.bars:hover span {
+    background-color: var(--orange);
+}
+
+.x-mark span:nth-child(1),
+.x-mark span:nth-child(2) {
+    top: 22px;
+    -webkit-transform: rotate(50deg);
+    -moz-transform: rotate(50deg);
+    -ms-transform: rotate(50deg);
+    -o-transform: rotate(50deg);
+    transform: rotate(50deg);
+}
+
+.x-mark span:nth-child(3) {
+    top: 22px;
+    -webkit-transform: rotate(-50deg);
+    -moz-transform: rotate(-50deg);
+    -ms-transform: rotate(-50deg);
+    -o-transform: rotate(-50deg);
+    transform: rotate(-50deg);
+}
+
+.x-mark:hover span {
+    background-color: red;
+}
